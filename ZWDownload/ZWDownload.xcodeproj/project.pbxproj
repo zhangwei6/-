@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84FEAB5D2481032F00743E3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB5C2481032F00743E3E /* AppDelegate.m */; };
+		84FEAB602481032F00743E3E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB5F2481032F00743E3E /* SceneDelegate.m */; };
+		84FEAB682481032F00743E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FEAB672481032F00743E3E /* Assets.xcassets */; };
+		84FEAB6B2481032F00743E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FEAB692481032F00743E3E /* LaunchScreen.storyboard */; };
+		84FEAB6E2481032F00743E3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB6D2481032F00743E3E /* main.m */; };
+		84FEAB992481039500743E3E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FEAB762481039400743E3E /* 1.jpg */; };
+		84FEAB9A2481039500743E3E /* ZWMultiDownloadController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB792481039500743E3E /* ZWMultiDownloadController+UI.m */; };
+		84FEAB9B2481039500743E3E /* ZWDownloadTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB7A2481039500743E3E /* ZWDownloadTaskCell.m */; };
+		84FEAB9C2481039500743E3E /* ZWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB7B2481039500743E3E /* ZWMainViewController.m */; };
+		84FEAB9D2481039500743E3E /* DownloadUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB7F2481039500743E3E /* DownloadUtil.m */; };
+		84FEAB9E2481039500743E3E /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB812481039500743E3E /* EXTScope.m */; };
+		84FEAB9F2481039500743E3E /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB842481039500743E3E /* NSString+MD5.m */; };
+		84FEABA02481039500743E3E /* ZWToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB872481039500743E3E /* ZWToast.m */; };
+		84FEABA12481039500743E3E /* ZWDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB8A2481039500743E3E /* ZWDownloadManager.m */; };
+		84FEABA22481039500743E3E /* ZWDownloadOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB8C2481039500743E3E /* ZWDownloadOperate.m */; };
+		84FEABA32481039500743E3E /* ZWFileOperate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB8E2481039500743E3E /* ZWFileOperate.m */; };
+		84FEABA42481039500743E3E /* ZWDownloadCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB912481039500743E3E /* ZWDownloadCellModel.m */; };
+		84FEABA52481039500743E3E /* ZWDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB932481039500743E3E /* ZWDownloadModel.m */; };
+		84FEABA62481039500743E3E /* ZWMultiDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB952481039500743E3E /* ZWMultiDownloadModel.m */; };
+		84FEABA72481039500743E3E /* ZWMultiDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB962481039500743E3E /* ZWMultiDownloadController.m */; };
+		84FEABA82481039500743E3E /* ZWMultiDownloadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FEAB982481039500743E3E /* ZWMultiDownloadViewModel.m */; };
+		D241E33723CA155598EBBB02 /* Pods_ZWDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605A637010CD64ED6E3FE7CF /* Pods_ZWDownload.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		605A637010CD64ED6E3FE7CF /* Pods_ZWDownload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZWDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FEAB582481032F00743E3E /* ZWDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FEAB5B2481032F00743E3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84FEAB5C2481032F00743E3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84FEAB5E2481032F00743E3E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		84FEAB5F2481032F00743E3E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		84FEAB672481032F00743E3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FEAB6A2481032F00743E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84FEAB6C2481032F00743E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FEAB6D2481032F00743E3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84FEAB742481039400743E3E /* ZWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWMainViewController.h; sourceTree = "<group>"; };
+		84FEAB752481039400743E3E /* ZWDownloadTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadTaskCell.h; sourceTree = "<group>"; };
+		84FEAB762481039400743E3E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		84FEAB772481039400743E3E /* ZWMultiDownloadViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWMultiDownloadViewModel.h; sourceTree = "<group>"; };
+		84FEAB782481039500743E3E /* ZWMultiDownloadController+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZWMultiDownloadController+UI.h"; sourceTree = "<group>"; };
+		84FEAB792481039500743E3E /* ZWMultiDownloadController+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZWMultiDownloadController+UI.m"; sourceTree = "<group>"; };
+		84FEAB7A2481039500743E3E /* ZWDownloadTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDownloadTaskCell.m; sourceTree = "<group>"; };
+		84FEAB7B2481039500743E3E /* ZWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWMainViewController.m; sourceTree = "<group>"; };
+		84FEAB7E2481039500743E3E /* DownloadUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadUtil.h; sourceTree = "<group>"; };
+		84FEAB7F2481039500743E3E /* DownloadUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadUtil.m; sourceTree = "<group>"; };
+		84FEAB802481039500743E3E /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		84FEAB812481039500743E3E /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		84FEAB822481039500743E3E /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		84FEAB832481039500743E3E /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		84FEAB842481039500743E3E /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		84FEAB852481039500743E3E /* ZWDownloadDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadDefine.h; sourceTree = "<group>"; };
+		84FEAB862481039500743E3E /* ZWToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWToast.h; sourceTree = "<group>"; };
+		84FEAB872481039500743E3E /* ZWToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWToast.m; sourceTree = "<group>"; };
+		84FEAB892481039500743E3E /* ZWDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadManager.h; sourceTree = "<group>"; };
+		84FEAB8A2481039500743E3E /* ZWDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDownloadManager.m; sourceTree = "<group>"; };
+		84FEAB8B2481039500743E3E /* ZWDownloadOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadOperate.h; sourceTree = "<group>"; };
+		84FEAB8C2481039500743E3E /* ZWDownloadOperate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDownloadOperate.m; sourceTree = "<group>"; };
+		84FEAB8D2481039500743E3E /* ZWFileOperate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWFileOperate.h; sourceTree = "<group>"; };
+		84FEAB8E2481039500743E3E /* ZWFileOperate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWFileOperate.m; sourceTree = "<group>"; };
+		84FEAB902481039500743E3E /* ZWDownloadCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadCellModel.h; sourceTree = "<group>"; };
+		84FEAB912481039500743E3E /* ZWDownloadCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDownloadCellModel.m; sourceTree = "<group>"; };
+		84FEAB922481039500743E3E /* ZWDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWDownloadModel.h; sourceTree = "<group>"; };
+		84FEAB932481039500743E3E /* ZWDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWDownloadModel.m; sourceTree = "<group>"; };
+		84FEAB942481039500743E3E /* ZWMultiDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWMultiDownloadModel.h; sourceTree = "<group>"; };
+		84FEAB952481039500743E3E /* ZWMultiDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWMultiDownloadModel.m; sourceTree = "<group>"; };
+		84FEAB962481039500743E3E /* ZWMultiDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWMultiDownloadController.m; sourceTree = "<group>"; };
+		84FEAB972481039500743E3E /* ZWMultiDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWMultiDownloadController.h; sourceTree = "<group>"; };
+		84FEAB982481039500743E3E /* ZWMultiDownloadViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWMultiDownloadViewModel.m; sourceTree = "<group>"; };
+		C185B97C0FA246631C1456B1 /* Pods-ZWDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWDownload.debug.xcconfig"; path = "Target Support Files/Pods-ZWDownload/Pods-ZWDownload.debug.xcconfig"; sourceTree = "<group>"; };
+		C7786C0CDBAEA083DF2EB564 /* Pods-ZWDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZWDownload.release.xcconfig"; path = "Target Support Files/Pods-ZWDownload/Pods-ZWDownload.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84FEAB552481032F00743E3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D241E33723CA155598EBBB02 /* Pods_ZWDownload.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23857E03E785ACD4541FAA15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C185B97C0FA246631C1456B1 /* Pods-ZWDownload.debug.xcconfig */,
+				C7786C0CDBAEA083DF2EB564 /* Pods-ZWDownload.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84FEAB4F2481032F00743E3E = {
+			isa = PBXGroup;
+			children = (
+				84FEAB5A2481032F00743E3E /* ZWDownload */,
+				84FEAB592481032F00743E3E /* Products */,
+				23857E03E785ACD4541FAA15 /* Pods */,
+				FFCA53AD3B497996CE950ADD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84FEAB592481032F00743E3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB582481032F00743E3E /* ZWDownload.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84FEAB5A2481032F00743E3E /* ZWDownload */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB762481039400743E3E /* 1.jpg */,
+				84FEAB7C2481039500743E3E /* Download */,
+				84FEAB752481039400743E3E /* ZWDownloadTaskCell.h */,
+				84FEAB7A2481039500743E3E /* ZWDownloadTaskCell.m */,
+				84FEAB742481039400743E3E /* ZWMainViewController.h */,
+				84FEAB7B2481039500743E3E /* ZWMainViewController.m */,
+				84FEAB972481039500743E3E /* ZWMultiDownloadController.h */,
+				84FEAB962481039500743E3E /* ZWMultiDownloadController.m */,
+				84FEAB782481039500743E3E /* ZWMultiDownloadController+UI.h */,
+				84FEAB792481039500743E3E /* ZWMultiDownloadController+UI.m */,
+				84FEAB772481039400743E3E /* ZWMultiDownloadViewModel.h */,
+				84FEAB982481039500743E3E /* ZWMultiDownloadViewModel.m */,
+				84FEAB5B2481032F00743E3E /* AppDelegate.h */,
+				84FEAB5C2481032F00743E3E /* AppDelegate.m */,
+				84FEAB5E2481032F00743E3E /* SceneDelegate.h */,
+				84FEAB5F2481032F00743E3E /* SceneDelegate.m */,
+				84FEAB672481032F00743E3E /* Assets.xcassets */,
+				84FEAB692481032F00743E3E /* LaunchScreen.storyboard */,
+				84FEAB6C2481032F00743E3E /* Info.plist */,
+				84FEAB6D2481032F00743E3E /* main.m */,
+			);
+			path = ZWDownload;
+			sourceTree = "<group>";
+		};
+		84FEAB7C2481039500743E3E /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB7D2481039500743E3E /* Common */,
+				84FEAB882481039500743E3E /* Download */,
+				84FEAB8F2481039500743E3E /* Model */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		84FEAB7D2481039500743E3E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB7E2481039500743E3E /* DownloadUtil.h */,
+				84FEAB7F2481039500743E3E /* DownloadUtil.m */,
+				84FEAB802481039500743E3E /* EXTScope.h */,
+				84FEAB812481039500743E3E /* EXTScope.m */,
+				84FEAB822481039500743E3E /* metamacros.h */,
+				84FEAB832481039500743E3E /* NSString+MD5.h */,
+				84FEAB842481039500743E3E /* NSString+MD5.m */,
+				84FEAB852481039500743E3E /* ZWDownloadDefine.h */,
+				84FEAB862481039500743E3E /* ZWToast.h */,
+				84FEAB872481039500743E3E /* ZWToast.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		84FEAB882481039500743E3E /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB892481039500743E3E /* ZWDownloadManager.h */,
+				84FEAB8A2481039500743E3E /* ZWDownloadManager.m */,
+				84FEAB8B2481039500743E3E /* ZWDownloadOperate.h */,
+				84FEAB8C2481039500743E3E /* ZWDownloadOperate.m */,
+				84FEAB8D2481039500743E3E /* ZWFileOperate.h */,
+				84FEAB8E2481039500743E3E /* ZWFileOperate.m */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		84FEAB8F2481039500743E3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84FEAB902481039500743E3E /* ZWDownloadCellModel.h */,
+				84FEAB912481039500743E3E /* ZWDownloadCellModel.m */,
+				84FEAB922481039500743E3E /* ZWDownloadModel.h */,
+				84FEAB932481039500743E3E /* ZWDownloadModel.m */,
+				84FEAB942481039500743E3E /* ZWMultiDownloadModel.h */,
+				84FEAB952481039500743E3E /* ZWMultiDownloadModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFCA53AD3B497996CE950ADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				605A637010CD64ED6E3FE7CF /* Pods_ZWDownload.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84FEAB572481032F00743E3E /* ZWDownload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FEAB712481032F00743E3E /* Build configuration list for PBXNativeTarget "ZWDownload" */;
+			buildPhases = (
+				82A0DD0B24341FAD5FDD68FC /* [CP] Check Pods Manifest.lock */,
+				84FEAB542481032F00743E3E /* Sources */,
+				84FEAB552481032F00743E3E /* Frameworks */,
+				84FEAB562481032F00743E3E /* Resources */,
+				B7E5FD1972683D4025B923F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWDownload;
+			productName = ZWDownload;
+			productReference = 84FEAB582481032F00743E3E /* ZWDownload.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84FEAB502481032F00743E3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = ZW;
+				TargetAttributes = {
+					84FEAB572481032F00743E3E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 84FEAB532481032F00743E3E /* Build configuration list for PBXProject "ZWDownload" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84FEAB4F2481032F00743E3E;
+			productRefGroup = 84FEAB592481032F00743E3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84FEAB572481032F00743E3E /* ZWDownload */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84FEAB562481032F00743E3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FEAB6B2481032F00743E3E /* LaunchScreen.storyboard in Resources */,
+				84FEAB992481039500743E3E /* 1.jpg in Resources */,
+				84FEAB682481032F00743E3E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82A0DD0B24341FAD5FDD68FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZWDownload-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7E5FD1972683D4025B923F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZWDownload/Pods-ZWDownload-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZWDownload/Pods-ZWDownload-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZWDownload/Pods-ZWDownload-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84FEAB542481032F00743E3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FEAB9C2481039500743E3E /* ZWMainViewController.m in Sources */,
+				84FEABA82481039500743E3E /* ZWMultiDownloadViewModel.m in Sources */,
+				84FEAB9F2481039500743E3E /* NSString+MD5.m in Sources */,
+				84FEABA22481039500743E3E /* ZWDownloadOperate.m in Sources */,
+				84FEABA42481039500743E3E /* ZWDownloadCellModel.m in Sources */,
+				84FEABA62481039500743E3E /* ZWMultiDownloadModel.m in Sources */,
+				84FEABA02481039500743E3E /* ZWToast.m in Sources */,
+				84FEABA52481039500743E3E /* ZWDownloadModel.m in Sources */,
+				84FEAB5D2481032F00743E3E /* AppDelegate.m in Sources */,
+				84FEAB9E2481039500743E3E /* EXTScope.m in Sources */,
+				84FEABA32481039500743E3E /* ZWFileOperate.m in Sources */,
+				84FEAB6E2481032F00743E3E /* main.m in Sources */,
+				84FEABA72481039500743E3E /* ZWMultiDownloadController.m in Sources */,
+				84FEAB602481032F00743E3E /* SceneDelegate.m in Sources */,
+				84FEAB9A2481039500743E3E /* ZWMultiDownloadController+UI.m in Sources */,
+				84FEAB9B2481039500743E3E /* ZWDownloadTaskCell.m in Sources */,
+				84FEABA12481039500743E3E /* ZWDownloadManager.m in Sources */,
+				84FEAB9D2481039500743E3E /* DownloadUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84FEAB692481032F00743E3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84FEAB6A2481032F00743E3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84FEAB6F2481032F00743E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84FEAB702481032F00743E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84FEAB722481032F00743E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C185B97C0FA246631C1456B1 /* Pods-ZWDownload.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZWDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZWDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84FEAB732481032F00743E3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7786C0CDBAEA083DF2EB564 /* Pods-ZWDownload.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZWDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ZWDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84FEAB532481032F00743E3E /* Build configuration list for PBXProject "ZWDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FEAB6F2481032F00743E3E /* Debug */,
+				84FEAB702481032F00743E3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FEAB712481032F00743E3E /* Build configuration list for PBXNativeTarget "ZWDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FEAB722481032F00743E3E /* Debug */,
+				84FEAB732481032F00743E3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84FEAB502481032F00743E3E /* Project object */;
+}
