@@ -55,7 +55,7 @@
     [self.cancelAllBtn setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
     
     self.addTaskBtn = [[UIButton alloc] init];
-    [self.addTaskBtn setTitle:@"添加下载" forState:UIControlStateNormal];
+    [self.addTaskBtn setTitle:@"添加下载(单个)" forState:UIControlStateNormal];
     self.addTaskBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.addTaskBtn setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
     
@@ -69,10 +69,10 @@
     self.clearCacheBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.clearCacheBtn setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
     
-    self.sortBtn = [[UIButton alloc] init];
-    [self.sortBtn setTitle:@"开始时间排序" forState:UIControlStateNormal];
-    self.sortBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [self.sortBtn setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
+    self.addTasksBtn = [[UIButton alloc] init];
+    [self.addTasksBtn setTitle:@"添加下载(多个)" forState:UIControlStateNormal];
+    self.addTasksBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.addTasksBtn setTitleColor:UIColor.systemBlueColor forState:UIControlStateNormal];
     
     self.downloadAsyncTitleLabel = [UILabel new];
     self.downloadAsyncTitleLabel.text = @"下载并发数:";
@@ -96,7 +96,7 @@
     [self.view addSubview:self.addTaskBtn];
     [self.view addSubview:self.deleteTaskBtn];
     [self.view addSubview:self.clearCacheBtn];
-    [self.view addSubview:self.sortBtn];
+    [self.view addSubview:self.addTasksBtn];
     [self.view addSubview:self.downloadAsyncTitleLabel];
     [self.view addSubview:self.downloadAsyncCountTF];
     [self.view addSubview:self.downloadAsyncSwitch];
@@ -104,12 +104,12 @@
     
     [self.totalTaskCountProgressLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view).mas_offset(10);
-        make.top.mas_equalTo(self.view).mas_offset(80);
+        make.top.mas_equalTo(self.view).mas_offset(88);
     }];
     
     [self.totalTaskLengthProgressLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.view).mas_offset(-10);
-        make.top.mas_equalTo(self.view).mas_offset(80);
+        make.top.mas_equalTo(self.view).mas_offset(88);
     }];
     
     [self.downloadSpeedsLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -155,13 +155,19 @@
     [self.addTaskBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.deleteTaskBtn.mas_left).mas_offset(-20);
         make.top.mas_equalTo(self.deleteTaskBtn);
-        make.size.mas_equalTo(CGSizeMake(70, 30));
+        make.size.mas_equalTo(CGSizeMake(100, 30));
     }];
     
     [self.clearCacheBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.deleteTaskBtn);
         make.top.mas_equalTo(self.deleteTaskBtn.mas_bottom).mas_offset(10);
         make.size.mas_equalTo(CGSizeMake(70, 30));
+    }];
+    
+    [self.addTasksBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.clearCacheBtn.mas_left).mas_offset(-20);
+        make.top.mas_equalTo(self.clearCacheBtn);
+        make.size.mas_equalTo(CGSizeMake(100, 30));
     }];
     
     [self.downloadAsyncTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -179,12 +185,6 @@
         make.left.mas_equalTo(self.downloadAsyncCountTF.mas_right).mas_offset(10);
         make.centerY.mas_equalTo(self.downloadAsyncCountTF);
         make.size.mas_equalTo(CGSizeMake(40, 30));
-    }];
-    
-    [self.sortBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.clearCacheBtn);
-        make.top.mas_equalTo(self.clearCacheBtn.mas_bottom).mas_offset(10);
-        make.size.mas_equalTo(CGSizeMake(100, 30));
     }];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

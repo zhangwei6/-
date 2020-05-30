@@ -12,6 +12,12 @@
 #import "ZWToast.h"
 #import "ZWDownloadManager.h"
 
+@interface ZWMultiDownloadViewModel()
+
+@property(nonatomic, assign) NSInteger index;
+
+@end
+
 @implementation ZWMultiDownloadViewModel
 
 + (instancetype)init: (id<ArtDownloadViewModelProtocol>)delegate {
@@ -19,6 +25,7 @@
     ZWMultiDownloadViewModel *viewModel = [ZWMultiDownloadViewModel new];
     
     viewModel.downloadViewModelDelegate = delegate;
+    viewModel.index = 1;
     
     return viewModel;
 }
@@ -33,7 +40,59 @@
     self.multiDownloadModel = multiDownloadModel;
 }
 
+// 添加下载任务(单个)
 - (void)addNewTask {
+    
+    if (self.flag == 2) {
+        [ZWToast showToast:@"已选择多资源下载模式"];
+        return;
+    }
+    
+    self.flag = 1;
+    
+    if (!self.downloadModels) {
+        self.downloadModels = [NSMutableArray array];
+    }
+    
+    NSString *url = @"";
+    NSIndexPath *indexPath;
+    
+    if (self.index == 1) {
+        url = @"https://cdnvip.meishubao.com/videowbimage/2020-04/25/8037de81b67fc4e151f0cc94e8a15f80.mp4";
+        indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    } else if(self.index == 2) {
+        url = @"https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.2.dmg";
+        indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+    } else if(self.index == 3) {
+        url = @"https://qd.myapp.com/myapp/qqteam/pcqq/QQ9.0.8_2.exe";
+        indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    } else {
+        return;
+    }
+    
+    self.index += 1;
+    
+    ZWDownloadModel *downloadModel = [self getDownloadCellModelWithUrl:url indexPath:indexPath];
+    [self.downloadModels addObject:downloadModel];
+    
+    [self.downloadViewModelDelegate reloadWithIndexPath:nil];
+    
+    // 设置最大并发数量
+    [ZWDownloadManager sharedInstance].maxConcurrentCount = 2;
+    
+    // 开始下载
+    [[ZWDownloadManager sharedInstance] downLoadWithModel:downloadModel];
+}
+
+// 添加下载任务（多个）
+- (void)addNewTasks {
+    
+    if (self.flag == 1) {
+        [ZWToast showToast:@"已选择单资源下载模式"];
+        return;
+    }
+    
+    self.flag = 2;
     
     NSString *url1 = @"https://cdnvip.meishubao.com/videowbimage/2020-04/25/8037de81b67fc4e151f0cc94e8a15f80.mp4";
     NSIndexPath *indexPath1 = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -43,11 +102,19 @@
     NSIndexPath *indexPath2 = [NSIndexPath indexPathForRow:1 inSection:0];
     [self.multiDownloadModel.downloadCellModels addObject:[self getDownloadCellModelWithUrl:url2 indexPath:indexPath2]];
     
+    NSString *url3 = @"https://qd.myapp.com/myapp/qqteam/pcqq/QQ9.0.8_2.exe";
+    NSIndexPath *indexPath3 = [NSIndexPath indexPathForRow:2 inSection:0];
+    [self.multiDownloadModel.downloadCellModels addObject:[self getDownloadCellModelWithUrl:url3 indexPath:indexPath3]];
+    
     // 设置多任务下载需要显示下载速度
     self.multiDownloadModel.isNeedSpeed = true;
     
     [self.downloadViewModelDelegate reloadWithIndexPath:nil];
     
+    // 设置最大并发数量
+    [ZWDownloadManager sharedInstance].maxConcurrentCount = 2;
+    
+    // 开始下载
     [[ZWDownloadManager sharedInstance] downLoadWithMultiModel:self.multiDownloadModel progress:^(CGFloat progress, long long downloadedlength, long long totalLength) {
         
         // 更新总的任务大小进度

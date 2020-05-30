@@ -16,6 +16,9 @@ typedef void(^StateChangeBlock)(void);
 
 @interface ZWDownloadOperate : NSObject
 
+//最大的并发数量 (默认是:2)
+@property (nonatomic,assign) NSUInteger maxConcurrentCount;
+
 // 进度改变的时候回调，用于辅助更新多任务下载的总进度
 @property (nonatomic, copy) ProgressChangeBlock progressChangedBlock;
 

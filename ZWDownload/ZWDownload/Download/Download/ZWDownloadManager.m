@@ -14,21 +14,6 @@
 
 @interface ZWDownloadManager()<NSURLSessionDelegate>
 
-// 信号量
-@property (nonatomic, strong) dispatch_semaphore_t sem;
-
-// 所有任务
-@property (nonatomic, strong) NSMutableArray<ZWDownloadModel *> *downLoadQueue;
-
-// 暂停的任务
-@property (nonatomic, strong) NSMutableArray<ZWDownloadModel *> *pausedTasks;
-
-// 进行中的任务
-@property (nonatomic, strong) NSMutableArray<ZWDownloadModel *> *downLoadingTasks;
-
-// 等待中任务
-@property (nonatomic, strong) NSMutableArray<ZWDownloadModel *> *waitingTasks;
-
 @end
 
 @implementation ZWDownloadManager
@@ -40,7 +25,7 @@
     static dispatch_once_t pre = 0;
     dispatch_once(&pre, ^{
         share = [[ZWDownloadManager alloc] init];
-        share.maxConcurrentCount = 1;
+        share.maxConcurrentCount = 2;
     });
     return share;
 }
@@ -300,32 +285,11 @@
     [[ZWFileOperate shared] clearCache];    
 }
 
-#pragma mark - 懒加载
-- (NSMutableArray <ZWDownloadModel *>*)downLoadQueue{
-    if (!_downLoadQueue) {
-        _downLoadQueue = [NSMutableArray new];
-    }
-    return _downLoadQueue;
+- (void)setMaxConcurrentCount:(NSUInteger)maxConcurrentCount {
+    
+    _maxConcurrentCount = maxConcurrentCount;
+    
+    [ZWDownloadOperate sharedInstance].maxConcurrentCount = maxConcurrentCount;
 }
 
-- (NSMutableArray<ZWDownloadModel *> *)pausedTasks{
-    if (!_pausedTasks) {
-        _pausedTasks = [NSMutableArray new];
-    }
-    return _pausedTasks;
-}
-
-- (NSMutableArray<ZWDownloadModel *> *)downLoadingTasks{
-    if (!_downLoadingTasks) {
-        _downLoadingTasks = [NSMutableArray new];
-    }
-    return _downLoadingTasks;
-}
-
--(NSMutableArray<ZWDownloadModel *> *)waitingTasks{
-    if (!_waitingTasks) {
-        _waitingTasks = [NSMutableArray new];
-    }
-    return _waitingTasks;
-}
 @end

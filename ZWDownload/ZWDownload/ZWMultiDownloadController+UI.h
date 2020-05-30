@@ -42,17 +42,17 @@
 // 全部取消
 @property(nonatomic, strong) UIButton *cancelAllBtn;
 
-// 添加下载
+// 添加下载(单个)
 @property(nonatomic, strong) UIButton *addTaskBtn;
 
 // 删除下载
 @property(nonatomic, strong) UIButton *deleteTaskBtn;
 
+// 添加下载(多个)
+@property(nonatomic, strong) UIButton *addTasksBtn;
+
 // 清空缓存
 @property(nonatomic, strong) UIButton *clearCacheBtn;
-
-// 按开始时间排序
-@property(nonatomic, strong) UIButton *sortBtn;
 
 // 下载并发数标题
 @property(nonatomic, strong) UILabel *downloadAsyncTitleLabel;

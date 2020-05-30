@@ -43,6 +43,7 @@
     
     // 添加事件
     [self.addTaskBtn addTarget:self action:@selector(addTaskAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.addTasksBtn addTarget:self action:@selector(addTasksAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.deleteTaskBtn addTarget:self action:@selector(deleteTaskAction) forControlEvents:UIControlEventTouchUpInside];
     [self.startAllBtn addTarget:self action:@selector(resumeAllTaskAction) forControlEvents:UIControlEventTouchUpInside];
     [self.pauseAllBtn addTarget:self action:@selector(pauseAllTaskAction) forControlEvents:UIControlEventTouchUpInside];
@@ -56,9 +57,14 @@
     [self.viewModel getMultiDownloadModel];
 }
 
-// 添加新的下载任务
+// 添加新的下载任务（单个）
 - (void)addTaskAction: (UIButton *)btn {
     [self.viewModel addNewTask];
+}
+
+// 添加新的下载任务（多个）
+- (void)addTasksAction: (UIButton *)btn {
+    [self.viewModel addNewTasks];
 }
 
 // 删除选中下载任务
@@ -149,31 +155,61 @@
 
 #pragma mark - tableview代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.multiDownloadModel.downloadCellModels.count;
+    if (self.viewModel.flag == 1) {
+        return self.viewModel.downloadModels.count;
+    } else {
+        return self.viewModel.multiDownloadModel.downloadCellModels.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ZWDownloadTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:downloadTaskCellIdentifier forIndexPath:indexPath];
     
-    ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
-    downloadModel.indexPath = indexPath;
-    
-    cell.downloadCellModel = downloadModel;
+    if (self.viewModel.flag == 1) {
+        
+        ZWDownloadCellModel *downloadModel = (ZWDownloadCellModel *)self.viewModel.downloadModels[indexPath.row];
+        downloadModel.indexPath = indexPath;
+        
+        cell.downloadCellModel = downloadModel;
+        
+    } else {
+        
+        ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
+        downloadModel.indexPath = indexPath;
+        
+        cell.downloadCellModel = downloadModel;
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
-    downloadModel.isChoosed = true;
+    if (self.viewModel.flag == 1) {
+        
+        ZWDownloadCellModel *downloadModel = (ZWDownloadCellModel *)self.viewModel.downloadModels[indexPath.row];
+        downloadModel.isChoosed = true;
+        
+    } else {
+        
+        ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
+        downloadModel.isChoosed = true;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
-    downloadModel.isChoosed = false;
+    if (self.viewModel.flag == 1) {
+        
+        ZWDownloadCellModel *downloadModel = (ZWDownloadCellModel *)self.viewModel.downloadModels[indexPath.row];
+        downloadModel.isChoosed = false;
+        
+    } else {
+        
+        ZWDownloadCellModel *downloadModel = self.viewModel.multiDownloadModel.downloadCellModels[indexPath.row];
+        downloadModel.isChoosed = false;
+    }
 }
 
 @end

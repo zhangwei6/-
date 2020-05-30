@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZWDownloadManager : NSObject
 
-//最大的并发数量 (默认是:1)
+//最大的并发数量 (默认是:2)
 @property (nonatomic,assign) NSUInteger maxConcurrentCount;
 
 + (ZWDownloadManager *)sharedInstance;
